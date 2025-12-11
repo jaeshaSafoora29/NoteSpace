@@ -1,0 +1,44 @@
+:root{
+  --bg: #f4f4f4;
+  --card: #fff;
+  --accent: #4a4aff;
+  --text: #222;
+}
+
+[data-theme='dark']{
+  --bg: #0f1724;
+  --card: #0b1220;
+  --accent: #7c92ff;
+  --text: #e6eef8;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0; padding:0; font-family:Inter, Arial, sans-serif; background:var(--bg); color:var(--text);
+  transition: background-color .25s ease, color .25s ease;
+}
+header{display:flex; justify-content:space-between; align-items:center; padding:16px 24px; background:var(--accent); color:#fff}
+header h1{margin:0}
+.theme-toggle{cursor:pointer; user-select:none}
+
+.app{display:flex; min-height:calc(100vh - 72px)}
+.sidebar{width:260px; padding:16px; background: rgba(255,255,255,0.03)}
+.main-area{flex:1; padding:20px}
+
+.auth-box input, .filters input, .filters select{width:100%; padding:8px; margin:6px 0; border-radius:6px; border:1px solid #ccc}
+.auth-box button{width:100%; padding:10px; border:none; background:var(--accent); color:#fff; border-radius:6px; cursor:pointer}
+
+.note-input textarea{width:100%; height:120px; padding:12px; border-radius:8px; border:1px solid #ccc; resize:vertical}
+.controls{display:flex; gap:8px; align-items:center; margin-top:8px}
+.controls input, .controls button{padding:8px}
+.controls button{background:var(--accent); color:#fff; border:none; border-radius:6px; cursor:pointer}
+
+.notes-container{display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:12px; margin-top:20px}
+.note-card{padding:12px; border-radius:8px; box-shadow:0 6px 14px rgba(0,0,0,0.08); position:relative; overflow:hidden; transition: transform .12s ease}
+.note-card:hover{transform: translateY(-6px)}
+.note-card .meta{display:flex; justify-content:space-between; gap:8px}
+.note-card .text{white-space:pre-wrap; margin-top:8px}
+.note-actions{display:flex; gap:8px; margin-top:10px}
+.note-actions button{padding:6px 8px; border:none; border-radius:6px; cursor:pointer}
+
+@media (max-width:800px){.sidebar{display:none}.app{flex-direction:column}}
