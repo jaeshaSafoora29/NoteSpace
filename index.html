@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoteSpace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>NoteSpace</h1>
+        <input type="text" id="searchInput" placeholder="Search notes...">
+    </header>
+
+    <main>
+        <div class="note-form">
+            <input type="text" id="noteTitle" placeholder="Note title">
+            <textarea id="noteContent" placeholder="Write your note here..."></textarea>
+            <button id="addNoteBtn">Add Note</button>
+        </div>
+
+        <div class="notes-container" id="notesContainer">
+            <!-- Notes will appear here -->
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
