@@ -1,123 +1,46 @@
-🚀 Features
-🔐 Authentication
+NoteSpace – Online Notes Organizer:
 
-Secure Login & Signup
+NoteSpace is a lightweight and user-friendly web application for creating, organizing, and managing personal notes. It allows users to quickly write, edit, delete, and search notes directly in the browser with no installation required. Notes are saved automatically using localStorage, ensuring they remain available even after closing the browser.
 
-Password hashing
-
-JWT-based authentication
-
-📝 Notes Management
+Features:
 
 Create, edit, and delete notes
+Search notes instantly by title or content
+Clean and responsive interface for desktop & mobile
+LocalStorage support for saving notes permanently
+Categorization via titles (optional enhancement)
+Mark notes as important (optional enhancement)
 
-Search notes
+Optional Enhancements:
 
-Pin important notes
+Cloud sync for multi-device note access
+Dark/Light theme toggle
+Tag-based note categorization
+Rich-text editor (bold, italic, underline, etc.)
+Export or share notes as PDF/links
 
-Add categories
-
-Color-coded notes
-
-Reminder notifications (browser alerts)
-
-🎨 Modern UI
-
-Fully responsive layout
-
-Smooth animations
-
-Dark & light mode
-
-Organized card layout
-
-☁ Backend API (Node.js + Express + MongoDB)
-
-REST API endpoints:
-
-POST /auth/signup
-
-POST /auth/login
-
-GET /notes
-
-POST /notes
-
-PUT /notes/:id
-
-DELETE /notes/:id
-
-GET /reminders/upcoming
-
-📁 Project Structure
-notespace_project/
+NoteSpace/
 │
-├── backend/
-│   ├── models/
-│   ├── routes/
-│   ├── controllers/
-│   ├── server.js
-│   └── ...
-│
-├── frontend/
-│   ├── index.html
-│   ├── style.css
-│   └── script.js
-│
-├── package.json
+├── index.html
+├── style.css
+├── script.js
 ├── README.md
-└── .env.example
+└── assets/
 
-🛠️ Installation & Setup
-1. Install dependencies
-npm install
+Challenges:
 
-2. Create .env file
+Managing dynamic note creation and deletion efficiently
+Designing a clean, intuitive UI for fast note access
+Handling storage limits and LocalStorage data structure
+Ensuring full responsiveness on all device sizes
 
-Rename .env.example → .env, then fill in:
+Usage:
 
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_secret_key
-PORT=5000
+Open index.html in any modern browser.
+Write a title and content in the note editor.
+Click Add Note to save it.
+Click the delete (×) button to remove a note.
+Type into the search bar to filter notes instantly.
 
-3. Start the server
-npm start
-
-
-Your backend will run at:
-
-http://localhost:5000
-
-
-The frontend is served automatically by Express.
-
-🧪 Testing APIs
-
-You can test using:
-
-Postman
-
-Thunder Client (VS Code)
-
-curl
-
-Authorization:
-Use the JWT token you receive on login for all /notes routes.
-
-🌐 Deployment Options
-
-You can deploy using:
-
-Render (best for backend)
-
-Railway
-
-Vercel + Render combo
-
-Heroku (if available)
-
-If you want, I can prepare your exact deployment instructions.
-
-📜 License
-
-This project is created as part of an engineering assignment.
+Author
+Jaesha Safoora
